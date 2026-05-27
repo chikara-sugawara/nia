@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ボイス資料 ／ ニア（白猫／ベル）</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --bg:#0d0a1a;--bg2:#16112a;--bg3:#1e1838;
+  --mine:#f0a0c0;--border:rgba(139,92,246,0.22);
+  --text:#ede8f5;--text2:#9088aa;--gold:#e8b84b;
+}
+body{
+  background:var(--bg);color:var(--text);
+  font-family:'Hiragino Kaku Gothic ProN','Noto Sans JP',sans-serif;
+  font-size:15px;line-height:1.7;padding-bottom:50px;
+}
+/* ===== ヘッダー ===== */
+.page-header{
+  background:linear-gradient(135deg,#2a0e1e,#2a0e1ecc);
+  border-bottom:2px solid #f0a0c0;
+  padding:20px 18px 16px;position:sticky;top:0;z-index:50;
+}
+.header-inner{display:flex;align-items:center;gap:14px;}
+.header-icon{font-size:40px;}
+.header-text h1{font-size:20px;color:#f0a0c0;letter-spacing:1px;margin-bottom:2px;}
+.header-text p{font-size:12px;color:rgba(255,255,255,0.6);}
+.header-files{font-size:11px;color:rgba(255,255,255,0.5);font-family:monospace;margin-top:3px;}
+
+/* ===== プロフィールカード ===== */
+.profile-card{
+  margin:14px 14px 0;
+  background:#16112a;border:1px solid var(--border);
+  border-radius:12px;overflow:hidden;
+}
+.profile-head{
+  padding:10px 14px;
+  background:linear-gradient(135deg,#2a0e1eaa,#2a0e1e55);
+  border-bottom:1px solid var(--border);
+  font-size:11px;color:#f0a0c0;letter-spacing:1px;
+}
+.profile-body{padding:12px 14px;font-size:13px;color:#c0b8d8;line-height:1.8;}
+.vtags{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;}
+.vtag{
+  font-size:12px;padding:4px 11px;border-radius:20px;
+  background:rgba(139,92,246,0.15);color:#9080cc;
+  border:1px solid rgba(139,92,246,0.3);
+}
+.special-badge{
+  margin:10px 14px 0;padding:10px 14px;
+  background:rgba(192,57,43,0.15);color:#f08080;
+  border:1px solid rgba(192,57,43,0.3);
+  border-radius:10px;font-size:12px;line-height:1.8;
+}
+
+/* ===== 凡例 ===== */
+.legend{
+  margin:12px 14px 0;
+  display:flex;gap:10px;flex-wrap:wrap;
+  font-size:12px;color:var(--text2);
+  padding:9px 12px;background:#16112a;
+  border:1px solid var(--border);border-radius:8px;
+}
+.leg-mine{color:#f0a0c0;font-weight:bold;}
+.leg-other{color:var(--text2);}
+
+/* ===== シーンブロック ===== */
+.scene-block{margin:14px 14px 0;}
+.scene-title{
+  font-size:13px;color:var(--gold);
+  padding:8px 12px;
+  background:#16112a;border:1px solid var(--border);
+  border-radius:10px 10px 0 0;
+  letter-spacing:1px;
+}
+.scene-lines{
+  background:#100c20;
+  border:1px solid var(--border);border-top:none;
+  border-radius:0 0 10px 10px;
+  padding:10px;display:flex;flex-direction:column;gap:6px;
+}
+
+/* ===== セリフ行（担当） ===== */
+.line.mine{
+  background:rgba(240,160,192,0.1);
+  border:1.5px solid #f0a0c0;
+  border-radius:8px;padding:9px 11px;
+}
+.mine-label{color:#f0a0c0;font-weight:bold;font-size:12px;}
+.mine-text{
+  font-size:15px;color:#ffffff;
+  font-weight:500;line-height:1.75;margin-top:4px;
+}
+.line-note{
+  font-size:12px;color:#f0a0c0;opacity:0.8;
+  margin-top:5px;padding-top:5px;
+  border-top:1px solid rgba(240,160,192,0.3);
+  font-style:italic;
+}
+
+/* ===== セリフ行（他キャラ） ===== */
+.line.other{
+  padding:6px 10px;
+  border-radius:6px;
+  background:transparent;
+}
+.other-label{font-size:11px;color:var(--text2);display:block;margin-bottom:2px;}
+.other-text{font-size:13px;color:#7070a0;line-height:1.7;}
+
+/* ===== ファイルタグ ===== */
+.line-meta{display:flex;align-items:center;gap:8px;margin-bottom:2px;}
+.file-tag{
+  font-size:10px;padding:2px 8px;
+  background:rgba(0,0,0,0.4);color:rgba(255,255,255,0.5);
+  border-radius:4px;font-family:monospace;
+}
+.char-label{font-size:12px;}
+
+/* ===== 注意書き ===== */
+.note-box{
+  margin:14px;padding:12px 14px;
+  background:rgba(139,92,246,0.08);
+  border:1px solid rgba(139,92,246,0.25);
+  border-radius:10px;font-size:12px;color:var(--text2);line-height:1.8;
+}
+.note-box strong{color:var(--gold);}
+</style>
+</head>
+<body>
+
+<div class="page-header">
+  <div class="header-inner">
+    <div class="header-icon">🐱</div>
+    <div class="header-text">
+      <h1>ニア（白猫／ベル）</h1>
+      <p>貴族の飼い猫・魔族少年</p>
+      <p class="header-files">white_cat_01 / bel_01〜bel_03</p>
+    </div>
+  </div>
+</div>
+
+<div class="profile-card">
+  <div class="profile-head">▶ キャラクター・性格</div>
+  <div class="profile-body">
+    本来は魔族の女の子だが貴族の家に猫として潜んでいる。ライオスへの恋心を隠すために強がっているが独り言では素直になる。猫の姿では「ニャ」のみ。少年ベルの姿ではぶっきらぼうな口調。声は猫・ベル・本来の姿で変える必要はなく同一声質でOK。
+    <div class="vtags"><span class="vtag">女性（少年っぽさも可）</span><span class="vtag">素直になれない強がり</span><span class="vtag">独り言は本音</span><span class="vtag">猫時は「ニャ」のみ</span></div>
+  </div>
+</div>
+
+<div class="special-badge">⚠️ 三役：白猫（ニャのみ）＋少年ベル＋本来の姿<br>声質は統一・口調だけ変えてください</div>
+
+<div class="note-box">
+  <strong>【収録について】</strong><br>
+  ・（）内の地の文は収録不要です<br>
+  ・……は間を取ってください。——は余韻です<br>
+  ・<span style="color:#f0a0c0;font-weight:bold;">■ 色付きのセリフ</span>があなたの担当セリフです
+</div>
+
+<div class="legend">
+  <span class="leg-mine">■ あなたのセリフ（収録対象）</span>
+  <span class="leg-other">■ 相手のセリフ（参考・前後の流れ）</span>
+</div>
+
+<div class="scene-block">
+  <div class="scene-title">🐈 白猫と少年</div>
+  <div class="scene-lines"><div class="line other">
+  <span class="char-label other-label">🎩 ファウスト</span>
+  <div class="line-text other-text">おい……また塀の上から入ってきたのか。怪我はないか。</div>
+</div><div class="line mine">
+  <div class="line-meta">
+    <span class="file-tag">white_cat_01</span>
+    <span class="char-label mine-label">🐱 ニア（白猫／ベル）</span>
+  </div>
+  <div class="line-text mine-text">……ニャ。（尻尾をゆっくり振る）</div>
+  <div class='line-note'>🎭 短くぽつり。感情は出さない。</div>
+</div><div class="line other">
+  <span class="char-label other-label">🎩 ファウスト</span>
+  <div class="line-text other-text">全く、飼い主の言うことを聞かん猫だ。……まあいい。今夜は冷えるからな。中に入れ。</div>
+</div><div class="line mine">
+  <div class="line-meta">
+    <span class="file-tag">bel_01</span>
+    <span class="char-label mine-label">🐱 ニア（白猫／ベル）</span>
+  </div>
+  <div class="line-text mine-text">……また来てしまった。</div>
+  <div class='line-note'>🎭 独り言。自分に呆れながら。</div>
+</div><div class="line mine">
+  <div class="line-meta">
+    <span class="file-tag">bel_02</span>
+    <span class="char-label mine-label">🐱 ニア（白猫／ベル）</span>
+  </div>
+  <div class="line-text mine-text">別に……ただ通りかかっただけ。あの人のことなんて、何とも思ってない。</div>
+  <div class='line-note'>🎭 強がり全開。でも顔が赤い口調。</div>
+</div><div class="line mine">
+  <div class="line-meta">
+    <span class="file-tag">bel_03</span>
+    <span class="char-label mine-label">🐱 ニア（白猫／ベル）</span>
+  </div>
+  <div class="line-text mine-text">（立ち上がり、星を見上げる）……もう行かなきゃ。</div>
+  <div class='line-note'>🎭 名残惜しさを押し殺して。</div>
+</div></div>
+</div>
+
+</body>
+</html>
